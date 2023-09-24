@@ -1,0 +1,15 @@
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2021"
+authors = ["{{authors}}"]
+
+[dependencies]
+actix-web = "4.4.0"
+tera = { version = "1.19.1", default-features = false }
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread"] }
+include_assets = { version = "1.0.0", default-features = false, features = [
+    "zstd",
+] }
+tempdir = "0.3.7"
+actix-files = "0.6.2"

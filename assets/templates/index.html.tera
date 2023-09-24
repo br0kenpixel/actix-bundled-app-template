@@ -1,0 +1,13 @@
+{% extends "base.html.tera" %}
+{% block title %}Index{% endblock title %}
+{% block head_extra %}
+<link href="/styles/index.css" rel="stylesheet">
+{% endblock head_extra %}
+{% block content %}
+<h1>Index</h1>
+<p>Image:</p>
+<img src="/img/cat.jpg" width="100px">
+
+<button onclick="button_clicked();">Click to react</button>
+<script src="/js/index.js"></script>
+{% endblock content %}
