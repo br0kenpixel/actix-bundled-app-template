@@ -11,7 +11,7 @@ pub struct AssetExtractor;
 
 impl AssetExtractor {
     pub fn extract_assets() -> Result<TempDir, Error> {
-        let tempdir = TempDir::new("{{project-name}}")?;
+        let tempdir = TempDir::new(env!("CARGO_PKG_NAME"))?;
         let archive = NamedArchive::load(include_dir!(
             "assets",
             compression = "zstd",
